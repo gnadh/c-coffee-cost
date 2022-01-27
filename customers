@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;   
+namespace Collections
+{
+    public class Customer
+    {
+        public int custid { get; set; }
+        public string name { get; set; }    
+        public string city { get; set; }    
+        public double balance { get; set; } 
+    }
+    class TestCustomer
+    {
+        static void Main()
+            List<Customer> Customers = new List<Customer>();
+
+        Customer c1 = new Customer { custid = 1, name = "gopinadh", city = "vijayawada", balance = 123556 };
+        Customer c2 = new Customer { custid = 2, name = "nadh", city = "hyd", balance = 44556 };
+        Customer c3 = new Customer { custid = 3, name = "gopi", city = "vijaya", balance = 993556 };
+        Customers.Add(c1); Customers.Add(c2);Customers.Add(c3);
+            foreach(Customer obj in Customers)
+            {
+            Console.WriteLine(obj.custid+" "+obj.name+" "+obj.city+" "+obj.balance);
+            }
+            }
