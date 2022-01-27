@@ -23,3 +23,40 @@ namespace Collections
             Console.WriteLine(obj.custid+" "+obj.name+" "+obj.city+" "+obj.balance);
             }
             }
+using System;
+using System.Collections.Generic;
+using System.Collections;
+using Collections;
+
+namespace Collections
+{
+    public class Student
+    {
+        public int Sid { get; set; }
+        public string Name { get; set; }
+        public int Class { get; set; }
+        public float Marks { get; set; }
+
+    }
+}
+public class TestStudent
+{
+    static void Main()
+    {
+        Student s1 = new Student { Sid = 110, Name = "gopinadh", Class = 90, Marks = 22.33f };
+        Student s2 = new Student { Sid = 10, Name = "nadh", Class = 20, Marks = 62.33f };
+        Student s3 = new Student { Sid = 11, Name = "gopi", Class = 10, Marks = 92.33f };
+        List<Student> Students = new List<Student>() { s1, s2, s3 };
+        foreach (Student S in Students)
+        {
+            Console.WriteLine(S.Sid + " " + S.Name + " " + S.Class + " " + S.Marks);
+        }
+    }
+}
+
+
+
+
+    
+
+   
